@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<ul>
+    @foreach (var p in people)
+    {
+        <li>@p.Id - @p.FirstName @p.LastName</li>
+    }
+</ul>
+
+@code {
+    List<Person> people;
+
+    protected override Task OnInitializedAsync()
+    {
+        throw new NotImplementedException();
+    }
+}
