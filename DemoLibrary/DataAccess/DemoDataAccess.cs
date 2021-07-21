@@ -11,6 +11,7 @@ namespace DemoLibrary.DataAccess
     {
         const int ASCII_UPPER_A = 65;
         const int ASCII_LOWER_Z = 122;
+        const int REPEAT_TIMES = 10;
 
         private List<Person> _people = new();
 
@@ -21,10 +22,10 @@ namespace DemoLibrary.DataAccess
                 _people.Add(new Person
                 {
                     Id = i + 1,
-                    FirstName = ((char)(ASCII_UPPER_A + i)).ToString(),
-                    LastName = ((char)(ASCII_LOWER_Z - i)).ToString()
+                    FirstName = new String((char)(ASCII_UPPER_A + i), REPEAT_TIMES),
+                    LastName = new String((char)(ASCII_LOWER_Z - i), REPEAT_TIMES)
                 }
-                );
+                );;
             }
         }
 

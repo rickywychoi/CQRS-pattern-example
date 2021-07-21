@@ -10,5 +10,9 @@ namespace DemoLibrary.Queries
 {
     public record GetPersonListQuery() : IRequest<List<Person>>;
 
-    //public
+    //// record can be used here since we only need readibility of class.
+    //public class GetPersonListQuery : IRequest<List<Person>>
+    //{
+    //    public GetPersonListQuery() { }
+    //}
 }
